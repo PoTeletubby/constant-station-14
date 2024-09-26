@@ -95,3 +95,37 @@
   color: "#f6ce64"
   # long range since otherwise it'd defeat the point of a handheld radio independent of telecomms
   longRange: true
+
+
+# CS14
+
+- type: radioChannel
+  id: Nanotrasen
+  name: Nanotrasen
+  keycode: 'x'
+  frequency: 1452
+  color: "#96ff96"
+  longRange: true
+  
+- type: radioChannel
+  id: Salvage
+  name: Salvage
+  keycode: 'p'
+  frequency: 1442
+  color: "#756027"
+  
+- type: radioChannel
+  id: NuclearOperative
+  name: Nukeops
+  keycode: 'z'
+  frequency: 1773
+  color: "#963939"
+  longRange: true
+  
+- type: radioChannel
+  id: SolarGovernment
+  name: SolGov
+  keycode: 'o'
+  frequency: 1776
+  color: "#ffff75"
+  longRange: true

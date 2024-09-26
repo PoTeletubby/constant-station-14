@@ -1,0 +1,91 @@
+- type: entity
+  parent: [ EncryptionKey, BaseCentcommContraband ]
+  id: EncryptionKeyNanotrasen
+  name: nanotrasen encryption key
+  description: An encryption key used by captain's bosses' bosses.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Nanotrasen
+    defaultChannel: Nanotrasen
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: nano_label
+    
+- type: entity
+  parent: [ EncryptionKey, BaseCargoContraband ]
+  id: EncryptionKeySalvage
+  name: salvage encryption key
+  description: An encryption key used by members of the salvage team.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Supply
+    - Salvage
+    defaultChannel: Salvage
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - state: cargo_label
+ 
+- type: entity
+  parent: [ EncryptionKey, BaseSyndicateContraband ]
+  id: EncryptionKeyNukies
+  name: nukeops encryption key
+  description: An encryption key used by some dangerous people.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Syndicate
+    - NuclearOperative
+    defaultChannel: NuclearOperative
+  - type: Sprite
+    layers:
+    - state: crypt_red
+    - state: synd_label
+    
+- type: entity
+  parent: [ EncryptionKey, BaseCentcommContraband ]
+  id: EncryptionKeySolGov
+  name: solar government encryption key
+  description: An encryption key used by some very important people.
+  components:
+  - type: EncryptionKey
+    channels:
+    - SolarGovernment
+    defaultChannel: SolarGovernment
+  - type: Sprite
+    layers:
+    - state: crypt_gold
+    - state: nano_label
+    
+- type: entity
+  parent: [ EncryptionKey, BaseCentcommContraband ]
+  id: EncryptionKeyAll
+  name: experimental encryption key
+  description: An encryption key that gives access to most channels.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Supply
+    - CentCom
+    - Engineering
+    - Medical
+    - Science
+    - Supply
+    - Service
+    - Security
+    - Command
+    - Syndicate
+    - Freelance
+    - Binary
+    - Salvage
+    - Nanotrasen
+    - NuclearOperative
+    defaultChannel: Common
+  - type: Sprite
+    layers:
+    - state: crypt_gold
+    - state: nano_label
