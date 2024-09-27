@@ -1,0 +1,39 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetNanotrasen
+  name: nanotrasen headset
+  components:
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyStationMaster
+      - EncryptionKeyCentCom
+      - EncryptionKeyNanotrasen
+      
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetSalvageScience
+  name: field researcher headset
+  components:
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyScience
+      - EncryptionKeySalvage
+      
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetSolGov
+  name: solar government headset
+  components:
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/base.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyAll
+      - EncryptionKeySolGov

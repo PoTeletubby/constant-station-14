@@ -1,0 +1,29 @@
+- type: job
+  id: NanotrasenMentor
+  name: NT Mentor
+  description: TBA
+  playTimeTracker: JobNanotrasenMentor
+  setPreference: false
+  startingGear: NTMentorGear
+  icon: "JobIconNanotrasen"
+  supervisors: "NT Admins"
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+
+- type: startingGear
+  id: NTMentorGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomFormal
+    shoes: ClothingShoesChameleonNoSlips
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesCommand
+    outerClothing: ClothingOuterArmorHeavyGreen
+    id: NTPDA
+    ears: ClothingHeadsetNanotrasen
+    belt: WeaponPulsePistol
+    pocket1: ToolDebug
+    pocket2: PenCentcom

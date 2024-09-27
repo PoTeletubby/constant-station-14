@@ -1,0 +1,178 @@
+- type: entity
+  id: DecryptionRadio
+  name: decryption radio
+  description: An empty syndicate radio, cannot be used to talk through.
+  abstract: true
+  components:
+  - type: StationAiWhitelist
+  - type: WallMount
+  - type: ApcPowerReceiver
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: TelecomExempt
+  - type: EncryptionKeyHolder
+    keySlots: 25
+    keysExtractionMethod: Prying
+    keysUnlocked: false
+    unobstructedRequired: true
+    listenRange: 2
+    toggleOnInteract: false
+  - type: RadioSpeaker
+    toggleOnInteract: false
+  - type: Intercom
+  - type: Speech
+    speechVerb: Robotic
+  - type: ExtensionCableReceiver
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Appearance
+  - type: WiresVisuals
+  - type: WiresPanelSecurity
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+      key_slots: !type:Container
+  - type: Sprite
+    noRot: false
+    drawdepth: SmallObjects
+    sprite: Structures/Wallmounts/intercom.rsi
+    layers:
+    - state: base
+    - state: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      shader: unshaded
+    - state: broadcasting
+      map: ["enum.RadioDeviceVisualLayers.Broadcasting"]
+      shader: unshaded
+      visible: false
+    - state: speaker
+      map: ["enum.RadioDeviceVisualLayers.Speaker"]
+      shader: unshaded
+      visible: false
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      visible: false
+  - type: Transform
+    noRot: false
+    anchored: true
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-intercom
+    layoutId: Intercom
+  - type: ActivatableUIRequiresPower
+  - type: ActivatableUI
+    key: enum.IntercomUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.IntercomUiKey.Key:
+        type: IntercomBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Construction
+    graph: Intercom
+    node: intercom
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalGlassBreak
+              params:
+                volume: -4
+  - type: GenericVisualizer
+    visuals:
+      enum.WiresVisualLayers.MaintenancePanel:
+        enum.WiresVisualLayers.MaintenancePanel:
+          True: { visible: true }
+          False: { visible: false }
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+      enum.RadioDeviceVisuals.Broadcasting:
+        enum.RadioDeviceVisualLayers.Broadcasting:
+          True: { visible: true }
+          False: { visible: false }
+      enum.RadioDeviceVisuals.Speaker:
+        enum.RadioDeviceVisualLayers.Speaker:
+          True: { visible: true }
+          False: { visible: false }
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wallmount
+
+- type: entity
+  id: DecryptionRadioStation
+  description: A syndicate radio, cannot be used to talk through.
+  parent: DecryptionRadio
+  suffix: Station
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyStationMaster
+      
+- type: entity
+  id: DecryptionRadioNT
+  parent: DecryptionRadio
+  description: A reverse engineered syndicate radio, cannot be used to talk through.
+  suffix: Nanotrasen
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeySyndie
+      - EncryptionKeyNukies
+      - EncryptionKeyFreelance
+
+- type: entity
+  id: DecryptionRadioLPost
+  description: A syndicate radio that recieves most Nanotrasen signals, cannot be used to talk through.
+  parent: DecryptionRadio
+  suffix: Listening Post
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyStationMaster
+      - EncryptionKeyNanotrasen
+      - EncryptionKeyCentCom
+      - EncryptionKeyBinary
+      
+- type: entity
+  id: DecryptionRadioAll
+  description: A syndicate radio that receives all signals, cannot be used to talk through.
+  parent: DecryptionRadio
+  suffix: All
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyAll

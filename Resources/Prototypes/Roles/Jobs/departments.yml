@@ -7,6 +7,8 @@
   - CargoTechnician
   - Quartermaster
   - SalvageSpecialist
+  # CS14
+  - FieldResearcher
 
 - type: department
   id: Civilian
@@ -33,13 +35,14 @@
   - Zookeeper
   - ServiceWorker
 
+
+# CS14
 - type: department
-  id: CentralCommand
+  id: CentralCommandOLD
   name: department-CentralCommand
   description: department-CentralCommand-description
   color: "#0c344d"
   roles:
-  - CentralCommandOfficial
   - CBURN
   - ERTLeader
   - ERTChaplain
@@ -49,7 +52,7 @@
   - ERTEngineer
   - DeathSquad
   editorHidden: true
-  weight: 120
+  weight: -100
 
 - type: department
   id: Command
@@ -86,6 +89,8 @@
   - ChiefEngineer
   - StationEngineer
   - TechnicalAssistant
+  # CS14
+  - StationArchitect
 
 - type: department
   id: Medical
@@ -99,6 +104,8 @@
   - MedicalIntern
   - Psychologist
   - Paramedic
+  # CS14
+  - Brigmedic
 
 - type: department
   id: Security
@@ -112,6 +119,8 @@
   - SecurityOfficer
   - Detective
   - Warden
+  # CS14
+  - Brigmedic
 
 - type: department
   id: Science
@@ -122,6 +131,8 @@
   - ResearchDirector
   - Scientist
   - ResearchAssistant
+  # CS14
+  - FieldResearcher
 
 - type: department
   id: Silicon

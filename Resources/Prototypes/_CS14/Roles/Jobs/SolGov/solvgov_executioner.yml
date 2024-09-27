@@ -1,0 +1,29 @@
+- type: job
+  id: SolGovExecutioner
+  name: SolGov Executioner
+  description: TBA
+  playTimeTracker: JobSolvGovExecutioner
+  setPreference: false
+  startingGear: SolGovExecutionerGear
+  icon: "JobIconNanotrasen"
+  supervisors: SolGov
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  
+- type: startingGear
+  id: SolGovExecutionerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+    shoes: ClothingShoesColorWhite
+    head: ClothingHeadHatHardhatOrange
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesColorYellow
+    outerClothing: ClothingOuterVestHazard
+    ears: ClothingHeadsetSolGov
+    id: SolGovPDA
+    belt: ClothingBeltUtilityEngineering
+    pocket1: GasAnalyzer
+    pocket2: trayScanner

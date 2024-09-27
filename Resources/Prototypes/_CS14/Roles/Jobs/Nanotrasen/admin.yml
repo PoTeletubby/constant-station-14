@@ -1,0 +1,29 @@
+- type: job
+  id: NanotrasenAdmin
+  name: "NT Administration"
+  description: "TBA"
+  playTimeTracker: JobNanotrasenAdministration
+  setPreference: false
+  startingGear: NTAdminGear
+  icon: "JobIconNanotrasen"
+  supervisors: "SolGov"
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+- type: startingGear
+  id: NTAdminGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomFormal
+    shoes: ClothingShoesChameleonNoSlips
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesCommand
+    neck: ClothingNeckCloakCentcom
+    outerClothing: ClothingOuterArmorHeavyGreen
+    id: NTPDA
+    ears: ClothingHeadsetNanotrasen
+    belt: WeaponAdvancedLaser
+    pocket1: ToolDebug
+    pocket2: PenCentcom

@@ -1,0 +1,86 @@
+- type: entity
+  parent: BasePDA
+  id: ArchitectPDA
+  name: architect PDA
+  description: Synced to many stations.
+  components:
+  - type: Pda
+    id: EngineeringIDCard
+    state: pda-engineer
+  - type: PdaBorderColor
+    borderColor: "#949137"
+    accentVColor: "#A32D26"
+  - type: Icon
+    state: pda-engineer
+    
+- type: entity
+  parent: BaseSecurityPDA
+  id: NTPDA
+  name: Nanotrasen PDA
+  description: Blue and beautiful.
+  components:
+  - type: Pda
+    id: CentcomIDCard
+    state: pda-centcom
+    penSlot:
+      startingItem: PenCentcom
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    state: pda-centcom
+    
+- type: entity
+  parent: BasePDA
+  id: SalvSciencePDA
+  name: field science PDA
+  description: It emits a faint humming.
+  components:
+  - type: Pda
+    id: ResearchIDCard
+    state: pda-science
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#8900c9"
+  - type: Icon
+    state: pda-science
+    
+- type: entity
+  parent: BasePDA
+  id: SolGovPDA
+  name: SolGov PDA
+  description: This is a pretty important device.
+  components:
+  - type: Pda
+    id: CentcomIDCard
+    state: pda-centcom
+    penSlot:
+      startingItem: PenCentcom
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    state: pda-centcom
+  - type: HealthAnalyzer
+    scanDelay: 0
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: Instrument
+    allowPercussion: false
+    handheld: true
+    allowProgramChange: true
+    respectMidiLimits: false
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    notificationsEnabled: false
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NewsReaderCartridge
+      - LogProbeCartridge
+      - WantedListCartridge
+      - AstroNavCartridge

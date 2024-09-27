@@ -1,0 +1,43 @@
+- type: job
+  id: Brigmedic
+  name: Brigmedic
+  description: TBA
+  playTimeTracker: JobBrigmedic
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 18000 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 36000 #10 hrs
+  startingGear: NewBrigmedicGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: The Head of Security and the Chief Medical Officer
+  canBeAntag: false
+  access:
+  - Security
+  - Medical
+  - Brig
+  - Maintenance
+  - Service
+  - External
+  - Cryogenics
+  extendedAccess:
+  - Chemistry
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+    
+- type: startingGear
+  id: NewBrigmedicGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrigmedic
+    shoes: ClothingShoesBootsJack
+    back: ClothingBackpackBrigmedic
+    head: ClothingHeadHatBeretBrigmedic
+    eyes: ClothingEyesHudMedSec
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitBrigmedic
+    id: BrigmedicPDA
+    ears: ClothingHeadsetBrigmedic
+    belt: ClothingBeltMedicalFilled

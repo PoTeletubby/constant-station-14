@@ -1,0 +1,31 @@
+- type: department
+  id: Nanotrasen
+  name: Nanotrasen
+  description: TBA
+  color: "#82ff9f"
+  weight: 250
+  roles:
+  - NanotrasenAdmin
+  - NanotrasenMentor
+  
+- type: department
+  id: SolGov
+  name: Solar Government
+  description: TBA
+  color: "#fff382"
+  weight: 500
+  roles:
+  - SolGovHighComm
+  - SolGovRepresentative
+  - SolGovExecutioner
+  
+  
+- type: department
+  id: CentralCommand
+  name: department-CentralCommand
+  description: department-CentralCommand-description
+  color: "#0c344d"
+  roles:
+  - CentralCommandOfficial
+  - CentralCommandIntern
+  weight: 120

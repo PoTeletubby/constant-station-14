@@ -1,0 +1,29 @@
+- type: job
+  id: SolGovHighComm
+  name: SolGov High Command
+  description: TBA
+  playTimeTracker: JobSolGovHighCommand
+  setPreference: false
+  startingGear: SolGovHCGear
+  icon: "JobIconNanotrasen"
+  supervisors: nobody
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  
+- type: startingGear
+  id: SolGovHCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+    shoes: ClothingShoesColorWhite
+    head: ClothingHeadHatHardhatOrange
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesColorYellow
+    outerClothing: ClothingOuterVestHazard
+    ears: ClothingHeadsetSolGov
+    id: SolGovPDA
+    belt: ClothingBeltUtilityEngineering
+    pocket1: GasAnalyzer
+    pocket2: trayScanner

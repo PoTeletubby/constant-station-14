@@ -1,0 +1,30 @@
+- type: job
+  id: CentralCommandIntern
+  name: CentComm Intern
+  description: TBA
+  playTimeTracker: JobCentralCommandIntern
+  setPreference: false
+  startingGear: CentcomInternGear
+  icon: "JobIconNanotrasen"
+  supervisors: CC Officials
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+
+
+- type: startingGear
+  id: CentcomInternGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatCentcom
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterArmorBasic
+    id: CentcomPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: WeaponPistolN1984
+    pocket1: BoxFolderBlack
+    pocket2: PenCentcom

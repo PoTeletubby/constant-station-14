@@ -1,0 +1,28 @@
+
+# Jobs
+- type: playTimeTracker
+  id: JobNanotrasenAdministration
+  
+- type: playTimeTracker
+  id: JobNanotrasenMentor
+ 
+- type: playTimeTracker
+  id: JobCentralCommandIntern
+  
+- type: playTimeTracker
+  id: JobBrigmedic
+  
+- type: playTimeTracker
+  id: JobStationArchitect
+  
+- type: playTimeTracker
+  id: JobFieldResearcher
+  
+- type: playTimeTracker
+  id: JobSolGovHighCommand
+  
+- type: playTimeTracker
+  id: JobSolGovRepresentative
+  
+- type: playTimeTracker
+  id: JobSolvGovExecutioner

@@ -72,6 +72,8 @@
     - Security
     - Service
     - Supply
+    # CS14
+    - Salvage
     defaultChannel: Command
   - type: Sprite
     layers:

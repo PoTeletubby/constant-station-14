@@ -1,0 +1,32 @@
+- type: job
+  id: FieldResearcher
+  name: Field Researcher
+  description: TBA
+  playTimeTracker: JobFieldResearcher
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobScientist
+      time: 18000 #5 hrs
+    - !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 18000 #5 hrs
+  startingGear: FieldScientistGear
+  icon: "JobIconScientist"
+  supervisors: the research director and the quartermaster
+  access:
+  - Research
+  - Maintenance
+  - Cargo
+  - Salvage
+  - External
+
+
+- type: startingGear
+  id: FieldScientistGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScientist
+    shoes: ClothingShoesChameleonNoSlips
+    ears: ClothingHeadsetSalvageScience
+    head: ClothingShoesColorBlack
+    outerClothing: ClothingOuterCoatRndOpened
+    id: SalvSciencePDA

@@ -1,0 +1,30 @@
+- type: job
+  id: SolGovRepresentative
+  name: SolGov Representative
+  description: TBA
+  playTimeTracker: JobSolGovRepresentative
+  setPreference: false
+  startingGear: SolGovRepGear
+  icon: "JobIconNanotrasen"
+  supervisors: SolGov High Command
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  
+  
+- type: startingGear
+  id: SolGovRepGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+    shoes: ClothingShoesColorWhite
+    head: ClothingHeadHatHardhatOrange
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesColorYellow
+    outerClothing: ClothingOuterVestHazard
+    ears: ClothingHeadsetSolGov
+    id: SolGovPDA
+    belt: ClothingBeltUtilityEngineering
+    pocket1: GasAnalyzer
+    pocket2: trayScanner
