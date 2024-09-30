@@ -108,6 +108,18 @@
       fireCost: 100
       title: cremate
       sound: /Audio/Weapons/Guns/Gunshots/Magic/staff_chaos.ogg
+    - proto: BulletSleep
+      fireCost: 100
+      title: tranquilize
+      sound: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+    - proto: BulletSuffocate
+      fireCost: 100
+      title: poison
+      sound: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+    - proto: ClownBolt
+      fireCost: 100
+      title: honk
+      sound: /Audio/Weapons/Guns/Gunshots/laser_clown.ogg
   - type: Item
     size: Small
     heldPrefix: energy

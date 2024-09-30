@@ -1242,3 +1242,102 @@
     heat: 5000000
   - type: IgniteOnCollide
     fireStacks: 50
+    
+- type: entity
+  name: tranquilizer dart
+  id: BulletSleep
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/toys.rsi
+    layers:
+      - state: capbullet
+  - type: Projectile
+    #   soundHit:  Waiting on serv3
+    damage:
+      types:
+        Piercing: 0
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 15
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 15
+    solution: ammo
+  - type: InjectableSolution
+    solution: ammo
+    
+- type: entity
+  name: poison dart
+  id: BulletSuffocate
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/toys.rsi
+    layers:
+      - state: capbullet
+  - type: Projectile
+    #   soundHit:  Waiting on serv3
+    damage:
+      types:
+        Piercing: 0
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 15
+        reagents:
+        - ReagentId: HeartbreakerToxin
+          Quantity: 15
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 15
+    solution: ammo
+  - type: InjectableSolution
+    solution: ammo
+    
+- type: entity
+  name: clown bolt
+  id: ClownBolt
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser_greyscale
+      shader: unshaded
+      color: orangered
+  - type: Projectile
+    #   soundHit:  Waiting on serv3
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Piercing: 0
+  - type: SolutionContainerManager
+    solutions:
+      ammo:
+        maxVol: 15
+        reagents:
+        - ReagentId: Laughter
+          Quantity: 15
+  - type: RefillableSolution
+    solution: ammo
+  - type: DrainableSolution
+    solution: ammo
+  - type: SolutionInjectOnProjectileHit
+    transferAmount: 15
+    solution: ammo
+  - type: InjectableSolution
+    solution: ammo
