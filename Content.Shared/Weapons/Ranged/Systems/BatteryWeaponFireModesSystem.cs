@@ -1,3 +1,4 @@
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using Content.Shared.Database;
 using Content.Shared.Examine;
@@ -93,7 +94,7 @@ public sealed class BatteryWeaponFireModesSystem : EntitySystem
         SetFireMode(uid, component, index, user);
     }
 
-    private void SetFireMode(EntityUid uid, BatteryWeaponFireModesComponent component, int index, EntityUid? user = null)
+    public void SetFireMode(EntityUid uid, BatteryWeaponFireModesComponent component, int index, EntityUid? user = null)
     {
         var fireMode = component.FireModes[index];
         component.CurrentFireMode = index;
@@ -104,12 +105,29 @@ public sealed class BatteryWeaponFireModesSystem : EntitySystem
             if (!_prototypeManager.TryIndex<EntityPrototype>(fireMode.Prototype, out var prototype))
                 return;
 
+            var gun = Comp<GunComponent>(uid);
+
             projectileBatteryAmmoProvider.Prototype = fireMode.Prototype;
             projectileBatteryAmmoProvider.FireCost = fireMode.FireCost;
 
             if (user != null)
             {
-                _popupSystem.PopupClient(Loc.GetString("gun-set-fire-mode", ("mode", prototype.Name)), uid, user.Value);
+                if (fireMode.FireSound == default!)
+                {
+                    gun.SoundGunshotModified = gun.SoundGunshot;
+                }
+                else
+                {
+                    gun.SoundGunshotModified = fireMode.FireSound;
+                }
+                if (fireMode.ProtoTitle == default!)
+                {
+                    _popupSystem.PopupClient(Loc.GetString("gun-set-fire-mode", ("mode", prototype.Name)), uid, user.Value);
+                }
+                else
+                {
+                    _popupSystem.PopupClient(Loc.GetString("gun-set-fire-mode", ("mode", fireMode.ProtoTitle)), uid, user.Value);
+                }
             }
         }
     }

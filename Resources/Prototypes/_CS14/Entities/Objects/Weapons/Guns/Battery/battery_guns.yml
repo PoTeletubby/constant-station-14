@@ -1,0 +1,120 @@
+- type: entity
+  name: solar cannon
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponSolarCannon
+  description: TBA
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: SolarLaser
+    fireCost: 100
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  
+- type: entity
+  name: unstable disabler
+  parent: [ WeaponDisablerPractice, BaseSecurityCommandContraband ]
+  id: WeaponDisablerShock
+  description: TBA
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisablerShock
+    fireCost: 100
+
+- type: entity
+  name: redspace revolver
+  parent: BaseWeaponBattery
+  id: WeaponRedspaceRevolver
+  description: TBA
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Revolvers/deckard.rsi
+  - type: Gun
+    fireRate: 1.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisablerImproved
+    fireCost: 100
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletDisablerImproved
+      fireCost: 100
+      title: stun
+      sound: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - proto: BulletLaser
+      fireCost: 100
+      title: lethal
+      sound: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    - proto: TeslaGunBullet
+      fireCost: 100
+      title: electrocute
+      sound: /Audio/Effects/Lightning/lightningshock.ogg
+    - proto: BulletMagnum
+      fireCost: 100
+      title: bullet
+      sound: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+    - proto: WatcherBoltMagmawing
+      fireCost: 100
+      title: overheat
+      sound: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
+    - proto: WatcherBolt
+      fireCost: 100
+      title: freeze
+      sound: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
+    - proto: BulletMurder
+      fireCost: 100
+      title: kill
+      sound: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    - proto: BulletGib
+      fireCost: 100
+      title: gib
+      sound: /Audio/Weapons/Guns/Gunshots/Magic/staff_animation.ogg
+    - proto: BoltCremate
+      fireCost: 100
+      title: cremate
+      sound: /Audio/Weapons/Guns/Gunshots/Magic/staff_chaos.ogg
+  - type: Item
+    size: Small
+    heldPrefix: energy
+  - type: Battery
+    maxCharge: 600
+    startingCharge: 600
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 66.5
+    

@@ -1,4 +1,5 @@
 using Content.Shared.Weapons.Ranged.Systems;
+using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -42,4 +43,14 @@ public sealed partial class BatteryWeaponFireMode
     /// </summary>
     [DataField]
     public float FireCost = 100;
+
+
+    /// <summary>
+    /// CS14 changes
+    /// </summary>
+    [DataField("sound")]
+    public SoundSpecifier? FireSound = null;
+
+    [DataField("title")]
+    public string? ProtoTitle = null!;
 }

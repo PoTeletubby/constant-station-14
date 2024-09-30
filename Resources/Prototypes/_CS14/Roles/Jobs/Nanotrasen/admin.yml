@@ -22,7 +22,7 @@
     eyes: ClothingEyesGlassesCommand
     neck: ClothingNeckCloakCentcom
     outerClothing: ClothingOuterArmorHeavyGreen
-    id: NTPDA
+    id: NTAPDA
     ears: ClothingHeadsetNanotrasen
     belt: WeaponAdvancedLaser
     pocket1: ToolDebug

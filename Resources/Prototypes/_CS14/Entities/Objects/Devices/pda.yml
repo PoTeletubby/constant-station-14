@@ -4,29 +4,85 @@
   name: architect PDA
   description: Synced to many stations.
   components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
   - type: Pda
-    id: EngineeringIDCard
-    state: pda-engineer
+    id: ArchitectIDCard
+    state: pda-architect
   - type: PdaBorderColor
     borderColor: "#949137"
     accentVColor: "#A32D26"
   - type: Icon
-    state: pda-engineer
+    sprite: _CS14/Objects/Devices/pda.rsi
+    state: pda-architect
     
 - type: entity
   parent: BaseSecurityPDA
-  id: NTPDA
-  name: Nanotrasen PDA
-  description: Blue and beautiful.
+  id: NTMPDA
+  name: Nanotrasen Mentor PDA
+  description: Seems like a helpful device.
   components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
   - type: Pda
-    id: CentcomIDCard
-    state: pda-centcom
+    id: NTMentorIDCard
+    state: pda-nanotrasen
     penSlot:
       startingItem: PenCentcom
       whitelist:
         tags:
         - Write
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    sprite: _CS14/Objects/Devices/pda.rsi
+    state: pda-nanotrasen
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: NTAPDA
+  name: Nanotrasen PDA
+  description: Blue and beautiful.
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
+  - type: Pda
+    id: NTAdminIDCard
+    state: pda-nanotrasen
+    penSlot:
+      startingItem: PenCentcom
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    sprite: _CS14/Objects/Devices/pda.rsi
+    state: pda-nanotrasen
+    
+- type: entity
+  parent: CentcomPDA
+  id: CentcomInternPDA
+  name: CentComm Intern PDA
+  description: Light green sign of walking bureaucracy.
+  components:
+  - type: Pda
+    id: CCInternIDCard
+    state: pda-centcom
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    state: pda-centcom
+    
+- type: entity
+  parent: CentcomPDA
+  id: CentcomOfficialPDA
+  name: CentComm Official PDA
+  description: Demands respect.
+  components:
+  - type: Pda
+    id: CCOfficialIDCard
+    state: pda-centcom
   - type: PdaBorderColor
     borderColor: "#00842e"
   - type: Icon
@@ -38,24 +94,30 @@
   name: field science PDA
   description: It emits a faint humming.
   components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
   - type: Pda
-    id: ResearchIDCard
-    state: pda-science
+    id: FieldScientistIDCard
+    state: pda-fieldresearcher
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#8900c9"
   - type: Icon
-    state: pda-science
+    sprite: _CS14/Objects/Devices/pda.rsi
+    state: pda-fieldresearcher
     
 - type: entity
   parent: BasePDA
-  id: SolGovPDA
-  name: SolGov PDA
-  description: This is a pretty important device.
+  id: SolGovRepPDA
+  name: SolGov Representative PDA
+  prefix: Representative
+  description: Dont shoot the messenger.
   components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
   - type: Pda
-    id: CentcomIDCard
-    state: pda-centcom
+    id: SGRepIDCard
+    state: pda-solgov
     penSlot:
       startingItem: PenCentcom
       whitelist:
@@ -64,7 +126,8 @@
   - type: PdaBorderColor
     borderColor: "#00842e"
   - type: Icon
-    state: pda-centcom
+    sprite: _CS14/Objects/Devices/pda.rsi
+    state: pda-solgov
   - type: HealthAnalyzer
     scanDelay: 0
     scanningEndSound:
@@ -84,3 +147,29 @@
       - LogProbeCartridge
       - WantedListCartridge
       - AstroNavCartridge
+ 
+- type: entity
+  parent: SolGovRepPDA
+  id: SolGovGuardPDA
+  name: SolGov Exectioner PDA
+  prefix: Executioner
+  description: A terrifying sight to see.
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
+  - type: Pda
+    id: SGExecutionerIDCard
+    state: pda-solgov
+    
+- type: entity
+  parent: SolGovRepPDA
+  id: SolGovHighCommPDA
+  name: SolGov High Command PDA
+  prefix: HighComm
+  description: Warm to the touch.
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Devices/pda.rsi
+  - type: Pda
+    id: SGHighCommIDCard
+    state: pda-solgov

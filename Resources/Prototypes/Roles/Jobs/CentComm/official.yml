@@ -9,7 +9,7 @@
     gloves: ClothingHandsGlovesColorBlack
     neck: ClothingNeckCloakCentcom
     outerClothing: ClothingOuterArmorReflective
-    id: CentcomPDA
+    id: CentcomOfficialPDA
     ears: ClothingHeadsetAltCentCom
     belt: WeaponPistolN1984
     pocket1: AccessConfigurator

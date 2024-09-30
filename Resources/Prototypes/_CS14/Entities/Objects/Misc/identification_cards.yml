@@ -1,0 +1,126 @@
+- type: entity
+  parent: IDCardStandard
+  id: ArchitectIDCard
+  name: architect ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: default
+    - state: idstationarchitect
+  - type: PresetIdCard
+    job: StationArchitect
+    
+- type: entity
+  parent: IDCardStandard
+  id: FieldScientistIDCard
+  name: field researcher ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: default
+    - state: idfieldresearcher
+  - type: PresetIdCard
+    job: FieldResearcher
+    
+- type: entity
+  parent: IDCardStandard
+  id: CCInternIDCard
+  name: centcomm intern ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: centcom
+    - state: centcomlow
+  - type: PresetIdCard
+    job: CentralCommandIntern
+    
+- type: entity
+  parent: IDCardStandard
+  id: CCOfficialIDCard
+  name: centcomm official ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: centcom
+  - type: PresetIdCard
+    job: CentralCommandOfficial
+  - type: Item
+    heldprefix: green
+    
+- type: entity
+  parent: IDCardStandard
+  id: NTMentorIDCard
+  name: nanotrasen mentor ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: nanotrasen
+    - state: nanotrasenmentor
+  - type: PresetIdCard
+    job: NanotrasenMentor
+  - type: Item
+    heldprefix: blue
+    
+- type: entity
+  parent: IDCardStandard
+  id: NTAdminIDCard
+  name: nanotrasen admin ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: nanotrasen
+    - state: nanotrasenadmin
+  - type: PresetIdCard
+    job: NanotrasenAdmin
+  - type: Item
+    heldprefix: blue
+    
+- type: entity
+  parent: IDCardStandard
+  id: SGRepIDCard
+  name: solgov representative ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: solgov
+  - type: PresetIdCard
+    job: SolGovRepresentative
+  - type: Item
+    heldprefix: blue
+    
+- type: entity
+  parent: IDCardStandard
+  id: SGExecutionerIDCard
+  name: solgov executioner ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: solgov
+    - state: solgovexecutioner
+  - type: PresetIdCard
+    job: SolGovExecutioner
+  - type: Item
+    heldprefix: blue
+    
+- type: entity
+  parent: IDCardStandard
+  id: SGHighCommIDCard
+  name: solgov high command ID card
+  components:
+  - type: Sprite
+    sprite: _CS14/Objects/Misc/id_cards.rsi 
+    layers:
+    - state: solgov
+    - state: solgovhighcomm
+  - type: PresetIdCard
+    job: SolGovHighComm
+  - type: Item
+    heldprefix: blue

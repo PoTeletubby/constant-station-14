@@ -1,0 +1,53 @@
+- type: entity
+  name: solar shield
+  parent: [EnergyShield, BaseSyndicateContraband]
+  id: SolarShield
+  description: TBA
+  components:
+    - type: ComponentToggler
+      components:
+      - type: DisarmMalus
+        malus: 1
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/e_shield.rsi
+      layers:
+        - state: eshield-icon
+        - state: eshield-on
+          color: "#FFFFFF"
+          visible: false
+          shader: unshaded
+          map: [ "shield" ]
+    - type: PointLight
+      netsync: false
+      enabled: false
+      radius: 1.5
+      energy: 2
+      color: yellow
+    - type: ItemTogglePointLight
+    - type: Reflect
+      reflectProb: 0.8
+      reflects:
+        - Energy
+        - NonEnergy
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 250000
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 200000
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                BrokenEnergyShield:
+                  min: 1
+                  max: 1

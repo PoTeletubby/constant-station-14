@@ -1,0 +1,9 @@
+- type: entity
+  id: ClothingBeltSheathFilledSolGov
+  parent: ClothingBeltSheathSolGov
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - ExecutionerSword

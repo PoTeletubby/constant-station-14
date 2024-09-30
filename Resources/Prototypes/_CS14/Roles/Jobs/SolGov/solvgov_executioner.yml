@@ -23,7 +23,7 @@
     gloves: ClothingHandsGlovesColorYellow
     outerClothing: ClothingOuterVestHazard
     ears: ClothingHeadsetSolGov
-    id: SolGovPDA
+    id: SolGovExecutionerPDA
     belt: ClothingBeltUtilityEngineering
     pocket1: GasAnalyzer
     pocket2: trayScanner

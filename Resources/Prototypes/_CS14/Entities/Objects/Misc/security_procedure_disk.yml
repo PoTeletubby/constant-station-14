@@ -1,0 +1,14 @@
+- type: entity
+  name: security procedure disk
+  parent: [BaseItem, BaseGrandTheftContraband]
+  id: SecDisk
+  description: Best used during a security or an engineering emergency, remember, you'll have to get a new one from CentComm if you use it.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/nukedisk.rsi
+    state: icon
+  - type: StaticPrice
+    price: 2000
+  - type: AccessReader
+    access: [["Command"]]
+  - type: ProcedureDisk

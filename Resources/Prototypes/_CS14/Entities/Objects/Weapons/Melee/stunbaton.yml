@@ -1,0 +1,36 @@
+- type: entity
+  name: solanite stun baton
+  parent: Stunbaton
+  id: StunbatonSolGov
+  description: TBA
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/stunbaton.rsi
+    layers:
+    - state: stunbaton_off
+      map: [ "enum.ToggleVisuals.Layer" ]
+  - type: Stunbaton
+    energyPerUse: 25
+  - type: ItemToggleMeleeWeapon
+    activatedDamage:
+      types:
+        Blunt: 0
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 5
+        Heat: 7
+    bluntStaminaDamageFactor: 4.0
+    angle: 60
+    animation: WeaponArcSlash
+  - type: StaminaDamageOnHit
+    damage: 65
+    sound: /Audio/Weapons/egloves.ogg
+  - type: StaminaDamageOnCollide
+    damage: 65
+  - type: Battery
+    maxCharge: 2000
+    startingCharge: 2000
+  - type: DisarmMalus
+    malus: 0.75
